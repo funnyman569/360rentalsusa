@@ -142,9 +142,9 @@ nav a:hover {
 }
 
 .hero-logo {
-  width: min(420px, 90vw);
+  width: min(190px, 48vw);
   height: auto;
-  margin: 0 0 28px -10px;
+  margin: 0 0 22px -4px;
   object-fit: contain;
 }
 
