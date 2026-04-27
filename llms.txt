@@ -1,11 +1,14 @@
 # 360 Rentals
 
-360 Rentals is a 360 photo booth rental company serving Salt Lake City and the Salt Lake Valley in Utah.
+> 360 Rentals is a local 360 photo booth rental company serving Salt Lake City and the Salt Lake Valley in Utah. The site focuses on weddings, receptions, corporate events, party entertainment, and venue partnership opportunities.
 
 ## Website
 
-- Home: https://www.360rentalsusa.com/
-- Bookings: https://www.360rentalsusa.com/#book
+- [Home](https://www.360rentalsusa.com/): Main 360 Rentals site with packages, booking, and service areas.
+- [Bookings](https://www.360rentalsusa.com/#book): Inquiry form and direct contact details.
+- [Salt Lake City](https://www.360rentalsusa.com/salt-lake-city/): Local landing page for Salt Lake City events and venues.
+- [Sandy](https://www.360rentalsusa.com/sandy/): Local landing page for Sandy weddings and events.
+- [Draper](https://www.360rentalsusa.com/draper/): Local landing page for Draper celebrations and partnerships.
 
 ## Core Offerings
 
@@ -31,3 +34,8 @@
 - Preferred vendor partnerships
 - Venue add-on options
 - Wedding, party, corporate, and quinceanera events
+
+## Contact
+
+- Email: hello@360rentalsusa.com
+- Phone: (208) 701-4426
