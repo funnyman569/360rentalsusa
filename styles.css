@@ -230,6 +230,11 @@ button {
   align-items: start;
 }
 
+.seo-section,
+.faq-section {
+  background: var(--white);
+}
+
 .intro-copy h2,
 .section-heading h2 {
   max-width: 870px;
@@ -237,7 +242,9 @@ button {
 
 .feature-grid,
 .package-grid,
-.process-grid {
+.process-grid,
+.seo-copy-grid,
+.faq-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
@@ -246,6 +253,7 @@ button {
 .feature-grid article,
 .package-card,
 .process-grid article,
+.seo-copy-grid article,
 .booking-form,
 .venue-copy {
   border: 1px solid var(--line);
@@ -254,7 +262,8 @@ button {
 }
 
 .feature-grid article,
-.process-grid article {
+.process-grid article,
+.seo-copy-grid article {
   display: grid;
   gap: 12px;
   padding: 24px;
@@ -472,6 +481,28 @@ textarea {
   color: var(--white);
 }
 
+.faq-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.faq-grid details {
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.faq-grid summary {
+  cursor: pointer;
+  font-weight: 850;
+}
+
+.faq-grid p {
+  margin: 12px 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
 .footer-logo {
   width: min(260px, 72vw);
   height: auto;
@@ -521,6 +552,8 @@ textarea {
   .feature-grid,
   .package-grid,
   .process-grid,
+  .seo-copy-grid,
+  .faq-grid,
   .booking-form {
     grid-template-columns: 1fr;
   }

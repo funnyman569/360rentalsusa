@@ -1,0 +1,33 @@
+# 360 Rentals
+
+360 Rentals is a 360 photo booth rental company serving Salt Lake City and the Salt Lake Valley in Utah.
+
+## Website
+
+- Home: https://www.360rentalsusa.com/
+- Bookings: https://www.360rentalsusa.com/#book
+
+## Core Offerings
+
+- Self-Serve 360: $80/hr
+- Share-Ready 360: $115/hr
+- White-Glove 360: $135/hr
+
+## Service Area
+
+- Salt Lake City
+- Sandy
+- Draper
+- Murray
+- South Jordan
+- West Jordan
+- Herriman
+- Riverton
+- Midvale
+- Taylorsville
+
+## Business Context
+
+- Preferred vendor partnerships
+- Venue add-on options
+- Wedding, party, corporate, and quinceanera events
