@@ -46,6 +46,16 @@ Optional apex/root domain forwarding:
 
 GitHub Pages does not use the repo name in the CNAME value. It uses your GitHub Pages host.
 
+## Search Console
+
+After the site is live, add `https://www.360rentalsusa.com/` to Google Search Console and submit:
+
+```text
+https://www.360rentalsusa.com/sitemap.xml
+```
+
+The sitemap now includes the homepage plus the local landing pages for Salt Lake City, Sandy, and Draper.
+
 ## Update Before Launch
 
 - Confirm `hello@360rentalsusa.com` is the right booking email.

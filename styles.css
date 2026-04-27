@@ -269,6 +269,36 @@ button {
   padding: 24px;
 }
 
+.location-links {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.location-card {
+  display: grid;
+  gap: 8px;
+  padding: 22px 24px;
+  border: 1px solid rgba(247, 147, 45, 0.24);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 247, 239, 1) 100%);
+  box-shadow: 0 10px 26px rgba(20, 24, 23, 0.05);
+}
+
+.location-card span {
+  color: var(--orange-dark);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.location-card strong {
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.2;
+}
+
 .feature-grid span {
   color: var(--gold);
   font-size: 13px;
@@ -553,6 +583,7 @@ textarea {
   .package-grid,
   .process-grid,
   .seo-copy-grid,
+  .location-links,
   .faq-grid,
   .booking-form {
     grid-template-columns: 1fr;
