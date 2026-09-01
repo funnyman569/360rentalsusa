@@ -6,6 +6,7 @@ const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matc
 
 // Hero video: play once, pause on last frame
 const heroVideo = document.querySelector(".hero-video");
+const heroFallback = document.querySelector(".hero-fallback");
 if (heroVideo && !reducedMotion) {
   heroVideo.addEventListener("ended", () => {
     heroVideo.pause();
@@ -13,8 +14,9 @@ if (heroVideo && !reducedMotion) {
   // Ensure it doesn't loop
   heroVideo.removeAttribute("loop");
 } else if (heroVideo) {
-  // Reduced motion: show poster/fallback only
+  // Reduced motion: show fallback instead of video
   heroVideo.remove();
+  if (heroFallback) heroFallback.style.display = "block";
 }
 
 const closeMenu = () => {
