@@ -58,6 +58,6 @@ The sitemap now includes the homepage plus the local landing pages for Salt Lake
 
 ## Update Before Launch
 
-- Confirm `hello@360rentalsusa.com` is the right booking email.
+- Confirm `hayden@360rentalsusa.com` is the right booking email.
 - Confirm `(208) 701-4426` is the public phone number.
 - Replace remote event photos with your real 360 Rentals booth/event photos when available.
