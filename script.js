@@ -60,33 +60,41 @@ if (reducedMotion || !("IntersectionObserver" in window)) {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-bookingForm?.addEventListener("submit", (event) => {
+bookingForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
+  const status = document.getElementById("formStatus");
+  const button = bookingForm.querySelector("button[type='submit']");
   const form = new FormData(bookingForm);
-  const name = String(form.get("name") || "");
-  const email = String(form.get("email") || "");
-  const phone = String(form.get("phone") || "");
-  const date = String(form.get("date") || "");
-  const eventType = String(form.get("eventType") || "");
-  const packageInterest = String(form.get("package") || "");
-  const details = String(form.get("details") || "");
 
-  const subject = encodeURIComponent(`360 Rentals availability request from ${name || "website"}`);
-  const body = encodeURIComponent(
-    [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Phone: ${phone || "Not provided"}`,
-      `Event date: ${date || "Not provided"}`,
-      `Event type: ${eventType}`,
-      `Package interest: ${packageInterest}`,
-      "",
-      "Event details:",
-      details || "Not provided"
-    ].join("\n")
-  );
+  // Skip if honeypot was filled (spam bot)
+  if (String(form.get("_honey") || "").trim() !== "") return;
 
-  window.location.href = `mailto:hello@360rentalsusa.com?subject=${subject}&body=${body}`;
+  const originalNote = status.textContent;
+  const originalButton = button.textContent;
+  status.textContent = "Sending…";
+  button.disabled = true;
+  button.textContent = "Sending…";
+
+  try {
+    const response = await fetch("https://formsubmit.co/ajax/hello@360rentalsusa.com", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify(Object.fromEntries(form))
+    });
+    const data = await response.json();
+    if (response.ok && data.success === "true") {
+      status.textContent = "Thanks! Your inquiry was sent. Hayden will follow up shortly.";
+      bookingForm.reset();
+    } else {
+      throw new Error(data.message || "Send failed");
+    }
+  } catch (err) {
+    status.textContent = "Sorry — something went wrong sending your inquiry. Please email hello@360rentalsusa.com directly.";
+    console.error(err);
+  } finally {
+    button.disabled = false;
+    button.textContent = originalButton;
+  }
 });
 
 document.querySelectorAll("[data-year]").forEach((node) => {

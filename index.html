@@ -398,6 +398,10 @@
             </div>
           </div>
           <form class="booking-form" id="bookingForm" data-reveal>
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <input type="hidden" name="_subject" value="New 360 Rentals inquiry from website" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
             <label>Name<input type="text" name="name" autocomplete="name" required /></label>
             <label>Email<input type="email" name="email" autocomplete="email" required /></label>
             <label>Phone<input type="tel" name="phone" autocomplete="tel" /></label>
@@ -422,8 +426,8 @@
               </select>
             </label>
             <label class="full">Event details<textarea name="details" placeholder="Location, guest count, timing, and anything else helpful."></textarea></label>
-            <button type="submit">Create email inquiry</button>
-            <p class="form-note">This opens your email app with the event details filled in. Nothing is sent until you review and send it.</p>
+            <button type="submit">Send inquiry</button>
+            <p class="form-note" id="formStatus">Your inquiry is emailed directly to hello@360rentalsusa.com. No email app needed.</p>
           </form>
         </div>
       </section>

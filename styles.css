@@ -1044,6 +1044,13 @@ button[type="submit"]:hover {
   box-shadow: var(--shadow);
 }
 
+.booking-form .honey {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .booking-form label {
   display: grid;
   gap: 9px;
