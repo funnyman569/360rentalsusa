@@ -76,7 +76,7 @@ bookingForm?.addEventListener("submit", async (event) => {
   button.textContent = "Sending…";
 
   try {
-    const response = await fetch("https://formsubmit.co/ajax/hello@360rentalsusa.com", {
+    const response = await fetch("https://formsubmit.co/ajax/hayden@360rentalsusa.com", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
       body: JSON.stringify(Object.fromEntries(form))
@@ -89,7 +89,7 @@ bookingForm?.addEventListener("submit", async (event) => {
       throw new Error(data.message || "Send failed");
     }
   } catch (err) {
-    status.textContent = "Sorry — something went wrong sending your inquiry. Please email hello@360rentalsusa.com directly.";
+    status.textContent = "Sorry — something went wrong sending your inquiry. Please email hayden@360rentalsusa.com directly.";
     console.error(err);
   } finally {
     button.disabled = false;
