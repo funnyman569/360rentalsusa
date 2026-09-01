@@ -159,9 +159,9 @@ h3 {
   align-items: center;
   min-height: 44px;
   font-family: var(--utility);
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -347,13 +347,14 @@ button[type="submit"]:hover {
   font-size: clamp(58px, 7.4vw, 112px);
   font-weight: 700;
   letter-spacing: -0.065em;
-  line-height: 0.88;
+  line-height: 0.95;
   text-wrap: balance;
 }
 
 .hero h1 em {
   color: var(--signal);
   font-style: normal;
+  white-space: nowrap;
 }
 
 .hero-lede {
@@ -376,14 +377,21 @@ button[type="submit"]:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 12px 28px;
-  margin: 42px 0 0;
+  margin: 40px 0 0;
   padding: 20px 0 0;
   border-top: 1px solid var(--line-dark);
-  color: rgba(244, 240, 232, 0.65);
+  color: rgba(244, 240, 232, 0.8);
   font-family: var(--utility);
-  font-size: 11px;
-  letter-spacing: 0.05em;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
+}
+
+.hero-meta span + span::before {
+  margin-right: 28px;
+  color: var(--signal);
+  content: "•";
 }
 
 .hero-stage {
@@ -433,6 +441,9 @@ button[type="submit"]:hover {
   border: 1px solid rgba(255, 179, 107, 0.82);
   border-radius: 50%;
   transform: translateY(-50%);
+  box-shadow:
+    0 0 0 1px rgba(244, 240, 232, 0.12),
+    0 30px 70px rgba(0, 0, 0, 0.35);
   pointer-events: none;
 }
 
@@ -558,7 +569,7 @@ button[type="submit"]:hover {
   margin: 0;
   font-family: var(--display);
   font-size: clamp(42px, 5.7vw, 78px);
-  font-weight: 650;
+  font-weight: 600;
   letter-spacing: -0.055em;
   line-height: 0.96;
   text-wrap: balance;
@@ -573,7 +584,7 @@ button[type="submit"]:hover {
 }
 
 .section-dark .section-heading > p:last-child {
-  color: rgba(244, 240, 232, 0.66);
+  color: rgba(244, 240, 232, 0.78);
 }
 
 .experience-grid {
@@ -722,9 +733,10 @@ button[type="submit"]:hover {
   margin: 22px 0 0;
   font-family: var(--display);
   font-size: clamp(52px, 5vw, 72px);
-  font-weight: 650;
+  font-weight: 700;
   letter-spacing: -0.06em;
   line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .price span {
@@ -967,6 +979,11 @@ button[type="submit"]:hover {
   font-weight: 600;
   letter-spacing: -0.025em;
   list-style: none;
+  transition: background 180ms ease;
+}
+
+.faq-list summary:hover {
+  background: rgba(241, 90, 50, 0.05);
 }
 
 .faq-list summary::-webkit-details-marker {
@@ -981,11 +998,14 @@ button[type="submit"]:hover {
   color: var(--signal);
   font-family: var(--utility);
   font-size: 28px;
+  font-weight: 500;
   transform: translateY(-50%);
+  transition: transform 200ms ease;
 }
 
 .faq-list details[open] summary::after {
   content: "−";
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .faq-list details p {
@@ -1082,6 +1102,12 @@ textarea {
   font-family: var(--body);
   font-size: 16px;
   text-transform: none;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(104, 113, 125, 0.75);
 }
 
 input:focus,
@@ -1089,6 +1115,14 @@ select:focus,
 textarea:focus {
   border-color: var(--signal);
   outline: 0;
+  background: rgba(241, 90, 50, 0.05);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(255, 179, 107, 0.5);
+  outline-offset: 2px;
 }
 
 textarea {
@@ -1151,9 +1185,9 @@ textarea {
   gap: 20px;
   padding-block: 20px;
   border-top: 1px solid var(--line-dark);
-  color: rgba(244, 240, 232, 0.58);
+  color: rgba(244, 240, 232, 0.75);
   font-family: var(--utility);
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -1474,6 +1508,14 @@ textarea {
     border-left: 0;
   }
 
+  .package-card h3 {
+    font-size: clamp(30px, 9vw, 42px);
+  }
+
+  .price {
+    font-size: clamp(44px, 14vw, 58px);
+  }
+
   .package-card:first-child {
     border-top: 0;
   }
@@ -1541,18 +1583,21 @@ textarea {
 
   .hero-grid,
   .location-hero-grid {
+    grid-template-columns: 1fr;
     min-height: auto;
-    gap: 42px;
+    gap: 48px;
     padding-block: 54px 48px;
   }
 
   .hero h1,
   .location-hero h1 {
-    font-size: clamp(52px, 16vw, 76px);
+    font-size: clamp(38px, 12vw, 54px);
+    line-height: 0.95;
   }
 
   .hero-lede {
     font-size: 18px;
+    margin-top: 24px;
   }
 
   .hero-actions {
