@@ -9,8 +9,15 @@
       content="360 Rentals provides 360 photo booth rentals in Salt Lake City, Sandy, Draper, Murray, and the Salt Lake Valley for weddings, parties, quinceaneras, and corporate events."
     />
     <meta name="author" content="360 Rentals" />
-    <meta name="theme-color" content="#f7932d" />
+    <meta name="theme-color" content="#0d1117" />
     <link rel="icon" href="assets/logo-transparent.png" />
+    <link rel="preload" as="image" href="assets/reference_360_image.png" imagesrcset="assets/reference_360_image.png 1624w" imagesizes="(max-width: 980px) 88vw, 52vw" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
     <meta property="og:title" content="360 Rentals | 360 Photo Booth Rentals in Salt Lake City, UT" />
     <meta
       property="og:description"
@@ -124,293 +131,328 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="360 Rentals home">
-        <img class="brand-logo" src="assets/logo-transparent.png" alt="360 Rentals" />
-        <span class="sr-only">360 Rentals home</span>
-      </a>
-      <nav aria-label="Primary navigation">
-        <a href="#packages">Packages</a>
-        <a href="#events">Events</a>
-        <a href="#venues">Partners</a>
-        <a href="#book">Book</a>
-      </nav>
-      <a class="nav-cta" href="tel:+12087014426">Call/Text</a>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header>
+      <div class="header-inner shell">
+        <a class="brand" href="#top" aria-label="360 Rentals home">
+          <img class="brand-logo" src="assets/logo-site.png" width="360" height="270" alt="360 Rentals" />
+        </a>
+        <nav class="site-nav" id="site-navigation" aria-label="Primary navigation" data-site-nav>
+          <a href="#experience">Experience</a>
+          <a href="#packages">Packages</a>
+          <a href="#venues">Partners</a>
+          <a href="#areas">Areas</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button header-cta" href="#book">Check availability</a>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open navigation"
+            aria-controls="site-navigation"
+            aria-expanded="false"
+            data-menu-button
+          >
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main id="top">
-      <section class="hero" aria-label="360 Rentals hero">
-        <img
-          class="hero-bg"
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85"
-          alt="Wedding guests celebrating at an event"
-        />
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Salt Lake area weddings, parties, and corporate events</p>
-          <h1>360 photo booth rentals in Salt Lake City.</h1>
-          <p class="hero-copy">
-            A clean, share-ready 360 photo booth experience for weddings, parties, quinceaneras, and corporate events across the Salt Lake Valley.
-          </p>
-          <div class="hero-actions">
-            <a class="button" href="#book">Check availability</a>
-            <a class="button secondary" href="#packages">View packages</a>
+    <main id="main">
+      <section class="hero hero-home" id="top" aria-labelledby="hero-title">
+        <div class="hero-grid shell">
+          <div class="hero-copy-block">
+            <p class="eyebrow eyebrow-light" data-reveal>Salt Lake Valley event rentals</p>
+            <h1 id="hero-title" data-reveal>Step in. <em>Spin once.</em> Keep the night.</h1>
+            <p class="hero-lede" data-reveal>
+              A 360 photo booth that gives your guests a reason to jump in—and a polished clip they can share before the night is over.
+            </p>
+            <div class="hero-actions" data-reveal>
+              <a class="button" href="#book">Check your date</a>
+              <a class="button button-secondary" href="#packages">Compare packages</a>
+            </div>
+            <p class="hero-meta" data-reveal>
+              <span>Weddings</span>
+              <span>Private parties</span>
+              <span>Corporate events</span>
+            </p>
+          </div>
+          <div class="hero-stage" data-reveal>
+            <figure class="hero-frame">
+              <video
+                class="hero-video"
+                src="assets/360-booth-rotation-reference_360_image-4s.mp4"
+                poster="assets/reference_360_image.png"
+                autoplay
+                muted
+                playsinline
+                width="1624"
+                height="969"
+                alt="360 photo booth with circular platform, rotating arm, and mounted iPhone"
+                fetchpriority="high"
+              ></video>
+              <img
+                class="hero-fallback"
+                src="assets/reference_360_image.png"
+                srcset="assets/reference_360_image.png 1624w"
+                sizes="(max-width: 980px) 88vw, 52vw"
+                width="1624"
+                height="969"
+                alt="360 photo booth with circular platform, rotating arm, and mounted iPhone"
+                decoding="async"
+              />
+            </figure>
+            <div class="orbit" aria-hidden="true"><span>360°</span></div>
+            <p class="hero-stamp">Weddings · parties · brands<br />Salt Lake Valley, Utah</p>
           </div>
         </div>
       </section>
 
-      <section class="section intro-section">
-        <div class="intro-copy">
-          <p class="eyebrow">What hosts get</p>
-          <h2>Guest energy during the event. Shareable memories after it.</h2>
-        </div>
-        <div class="feature-grid">
-          <article>
-            <span>01</span>
-            <h3>Custom event feel</h3>
-            <p>Video overlays and music options make the booth feel like it belongs at your event, not like generic rental equipment.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Easy sharing</h3>
-            <p>Guests can receive clips by email, AirDrop, or QR code depending on the package and event setup.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Digital gallery</h3>
-            <p>Hosts get access to a digital library of the videos captured throughout the party.</p>
-          </article>
+      <section class="proof-strip" aria-label="Service highlights">
+        <div class="proof-grid shell">
+          <div class="proof-item">
+            <span class="proof-mark">SLC</span>
+            <span><strong>Local coverage</strong><span>Salt Lake City and the surrounding valley</span></span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-mark">03</span>
+            <span><strong>Clear package levels</strong><span>From self-serve to a booth manager on site</span></span>
+          </div>
+          <div class="proof-item">
+            <span class="proof-mark">↗</span>
+            <span><strong>Built to share</strong><span>QR, email, or AirDrop depending on setup</span></span>
+          </div>
         </div>
       </section>
 
-      <section class="section seo-section" id="service-areas">
-        <div class="section-heading">
-          <p class="eyebrow">Service areas</p>
-          <h2>Salt Lake City and the surrounding valley.</h2>
-        </div>
-        <div class="seo-copy-grid">
-          <article>
-            <h3>Primary local coverage</h3>
-            <p>Salt Lake City, Sandy, Draper, Murray, South Jordan, West Jordan, Herriman, Riverton, Midvale, and Taylorsville.</p>
-          </article>
-          <article>
-            <h3>Best-fit partner targets</h3>
-            <p>Wedding venues, event centers, reception halls, party planners, DJs, quinceanera venues, and party rental companies.</p>
-          </article>
-          <article>
-            <h3>Search intent keywords</h3>
-            <p>360 photo booth rental Salt Lake City, wedding photo booth Utah, corporate event entertainment, and venue add-on entertainment.</p>
-          </article>
-        </div>
-        <div class="location-links" aria-label="Location landing pages">
-          <a class="location-card" href="/salt-lake-city/">
-            <span>Salt Lake City</span> —
-            <strong>Venue and corporate event rental guide</strong>
-          </a>
-          <a class="location-card" href="/sandy/">
-            <span>Sandy</span> —
-            <strong>Weddings, receptions, and local celebration fit</strong>
-          </a>
-          <a class="location-card" href="/draper/">
-            <span>Draper</span> —
-            <strong>Private events and partnership opportunities</strong>
-          </a>
-        </div>
-      </section>
-
-      <section class="image-band" id="events">
-        <div class="band-image">
-          <img
-            src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=1400&q=85"
-            alt="Guests dancing at a reception"
-          />
-        </div>
-        <div class="band-copy">
-          <p class="eyebrow">Built for real events</p>
-          <h2>Weddings, receptions, quinceaneras, private parties, and corporate events.</h2>
-          <p>
-            The best events have a few natural gathering points. A 360 booth gives guests an easy reason to jump in, laugh, record, and share the moment.
-          </p>
+      <section class="section section-white" id="experience">
+        <div class="experience-grid shell">
+          <div class="experience-media" data-reveal>
+            <img
+              src="assets/wedding-event.webp"
+              width="1400"
+              height="933"
+              alt="Friends celebrating together at a wedding"
+            />
+            <p class="media-note">The booth becomes a natural gathering point—then the clips keep the event moving online.</p>
+          </div>
+          <div class="experience-copy" data-reveal>
+            <p class="eyebrow">The guest experience</p>
+            <h2>One small platform. A roomful of energy.</h2>
+            <p>
+              Guests step on, the camera moves around them, and the moment turns into a video built for sharing. The setup feels intentional without asking the host to manage another complicated vendor.
+            </p>
+            <ul class="experience-list">
+              <li>
+                <span class="list-mark">A</span>
+                <div><h3>Make it feel like your event</h3><p>Custom overlays, music options, and event-ready props keep the booth from feeling generic.</p></div>
+              </li>
+              <li>
+                <span class="list-mark">B</span>
+                <div><h3>Let guests share the clip</h3><p>Sharing options can include QR, email, or AirDrop depending on the package and setup.</p></div>
+              </li>
+              <li>
+                <span class="list-mark">C</span>
+                <div><h3>Keep the gallery afterward</h3><p>The host gets access to the digital library captured throughout the event.</p></div>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section class="section" id="packages">
-        <div class="section-heading">
-          <p class="eyebrow">Packages</p>
-          <h2>Choose the amount of support your event needs.</h2>
-        </div>
-        <div class="package-grid">
-          <article class="package-card">
-            <div>
-              <p class="package-label">Most economical</p>
+      <section class="section section-dark" id="packages">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div><p class="eyebrow eyebrow-light">Packages</p><h2>Choose how hands-on you want to be.</h2></div>
+            <p>Every package gets the booth to your event. The difference is the phone, sharing setup, customization, and who manages the guest experience.</p>
+          </div>
+          <div class="package-grid" data-reveal>
+            <article class="package-card">
+              <span class="package-index">01 / Lean setup</span>
               <h3>Self-Serve 360</h3>
-              <p class="price">$80<span>/hr</span></p>
-            </div>
-            <p>
-              Booth setup and takedown for clients who want the 360 experience on a tighter budget. Guests mount their own phones and record on their own devices.
-            </p>
-            <ul>
-              <li>Setup and takedown included</li>
-              <li>Guests use their own phones</li>
-              <li>Props not included</li>
-            </ul>
-          </article>
-          <article class="package-card featured-package">
-            <div>
-              <p class="package-label">Most popular</p>
+              <p class="price">$80 <span>per hour</span></p>
+              <p class="package-summary">Best when your budget matters most and your guests are comfortable recording on their own devices.</p>
+              <p class="package-label">What is included</p>
+              <ul class="package-list">
+                <li>Booth setup and takedown</li>
+                <li>Guests use their own phones</li>
+                <li>No props included</li>
+              </ul>
+              <a class="button button-secondary" href="#book">Ask about self-serve</a>
+            </article>
+            <article class="package-card package-card-featured">
+              <span class="package-index">02 / Most popular</span>
               <h3>Share-Ready 360</h3>
-              <p class="price">$115<span>/hr</span></p>
-            </div>
-            <p>
-              A client-operated setup with the sharing pieces handled. Good for events that want polished clips without a booth manager on site.
-            </p>
-            <ul>
-              <li>Mounted phone provided</li>
-              <li>Custom video overlay</li>
-              <li>Up to three song choices</li>
-              <li>Generic props included</li>
-              <li>Event-customized props available</li>
-            </ul>
-          </article>
-          <article class="package-card">
-            <div>
-              <p class="package-label">Full service</p>
+              <p class="price">$115 <span>per hour</span></p>
+              <p class="package-summary">Best when you want polished, shareable clips but do not need a booth manager at the event.</p>
+              <p class="package-label">What is included</p>
+              <ul class="package-list">
+                <li>Mounted phone provided</li>
+                <li>Custom video overlay</li>
+                <li>Up to three song choices</li>
+                <li>Generic props included</li>
+                <li>Custom props available</li>
+              </ul>
+              <a class="button" href="#book">Check Share-Ready dates</a>
+            </article>
+            <article class="package-card">
+              <span class="package-index">03 / Full service</span>
               <h3>White-Glove 360</h3>
-              <p class="price">$135<span>/hr</span></p>
-            </div>
-            <p>
-              The Share-Ready setup plus a formal operator who stays at the event and manages the booth experience for guests.
-            </p>
-            <ul>
-              <li>Booth manager present</li>
-              <li>Guest flow support</li>
-              <li>Best for weddings and corporate events</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="venue-section" id="venues">
-        <div class="venue-copy">
-          <p class="eyebrow">Venues and planners</p>
-          <h2>Add a 360 booth option without adding planning friction.</h2>
-          <p>
-            360 Rentals can work as a preferred vendor recommendation or as an add-on your clients can include in their package. We keep the setup simple and the communication direct.
-          </p>
-          <a class="button secondary" href="#book">Ask about partner options</a>
-        </div>
-        <div class="venue-photo">
-          <img
-            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1400&q=85"
-            alt="Elegant event venue set for a celebration"
-          />
-        </div>
-      </section>
-
-      <section class="section process-section">
-        <div class="section-heading">
-          <p class="eyebrow">How it works</p>
-          <h2>A simple path from booking to shareable clips.</h2>
-        </div>
-        <div class="process-grid">
-          <article>
-            <h3>Reserve your date</h3>
-            <p>Send the event date, location, guest count, and package you are considering.</p>
-          </article>
-          <article>
-            <h3>Customize the setup</h3>
-            <p>We align on music, overlay style, sharing method, props, and arrival details.</p>
-          </article>
-          <article>
-            <h3>Enjoy the event</h3>
-            <p>Guests step onto the platform, capture clips, and the host gets access to the event gallery.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section faq-section" id="faq">
-        <div class="section-heading">
-          <p class="eyebrow">Frequently asked questions</p>
-          <h2>Clear answers that help guests, planners, and venues move faster.</h2>
-        </div>
-        <div class="faq-grid">
-          <details>
-            <summary>How far in advance should I book?</summary>
-            <p>Popular weekend dates book first, so it helps to reserve as soon as your event date is set.</p>
-          </details>
-          <details>
-            <summary>Do you work with venues and planners?</summary>
-            <p>Yes. 360 Rentals can be recommended as a preferred vendor or added into a package as an event feature.</p>
-          </details>
-          <details>
-            <summary>Which package is best for a budget-friendly event?</summary>
-            <p>Self-Serve 360 is the most economical option and is built for straightforward booth setup and takedown.</p>
-          </details>
-          <details>
-            <summary>Can guests share videos right away?</summary>
-            <p>Share-Ready 360 and White-Glove 360 support easy sharing options such as QR, email, and AirDrop depending on setup.</p>
-          </details>
-        </div>
-      </section>
-
-      <section class="booking-section" id="book">
-        <div class="booking-copy">
-          <p class="eyebrow">Check availability</p>
-          <h2>Tell us about your event.</h2>
-          <p>
-            Send a few details and Hayden will follow up with availability, fit, and the best package option.
-          </p>
-          <div class="contact-lines">
-            <a href="tel:+12087014426">(208) 701-4426</a>
-            <a href="mailto:hello@360rentalsusa.com">hello@360rentalsusa.com</a>
+              <p class="price">$135 <span>per hour</span></p>
+              <p class="package-summary">Best for weddings and corporate events where someone should keep guests moving and the booth running.</p>
+              <p class="package-label">What is included</p>
+              <ul class="package-list">
+                <li>Everything in Share-Ready</li>
+                <li>Booth manager present</li>
+                <li>Guest flow support</li>
+              </ul>
+              <a class="button button-secondary" href="#book">Ask about full service</a>
+            </article>
           </div>
         </div>
-        <form class="booking-form" id="bookingForm">
-          <label>
-            Name
-            <input name="name" autocomplete="name" required />
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-          <label>
-            Event date
-            <input type="date" name="date" />
-          </label>
-          <label>
-            Event type
-            <select name="eventType">
-              <option>Wedding or reception</option>
-              <option>Corporate event</option>
-              <option>Private party</option>
-              <option>Quinceanera</option>
-              <option>Venue / planner partnership</option>
-            </select>
-          </label>
-          <label class="full">
-            Event details
-            <textarea name="details" placeholder="Location, guest count, package interest, and anything else helpful."></textarea>
-          </label>
-          <button type="submit">Send inquiry</button>
-          <p class="form-note">This opens your email app with the details filled in.</p>
-        </form>
+      </section>
+
+      <section class="section" id="areas">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div><p class="eyebrow">Service area</p><h2>Built for the Salt Lake Valley.</h2></div>
+            <p>Primary coverage includes Salt Lake City, Sandy, Draper, Murray, South Jordan, West Jordan, Herriman, Riverton, Midvale, and Taylorsville.</p>
+          </div>
+          <div class="location-list" data-reveal>
+            <a class="location-link" href="/salt-lake-city/"><span>Salt Lake City</span><strong>Downtown venues and corporate events</strong></a>
+            <a class="location-link" href="/sandy/"><span>Sandy</span><strong>Weddings, receptions, and celebrations</strong></a>
+            <a class="location-link" href="/draper/"><span>Draper</span><strong>Private events and polished venues</strong></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="partner-grid" id="venues">
+        <div class="partner-image">
+          <img
+            src="assets/venue-event.webp"
+            width="1600"
+            height="1068"
+            alt="Event venue prepared for an elegant celebration"
+          />
+        </div>
+        <div class="partner-copy" data-reveal>
+          <p class="eyebrow">Venues and planners</p>
+          <h2>Add the booth. Skip the planning friction.</h2>
+          <p>Recommend 360 Rentals as a preferred vendor or include the booth as an add-on in your event package. We keep setup, communication, and guest flow straightforward.</p>
+          <a class="button button-dark" href="#book">Ask about partner options</a>
+        </div>
+      </section>
+
+      <section class="section section-white" id="process">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div><p class="eyebrow">How it works</p><h2>From an open date to an open gallery.</h2></div>
+            <p>Three real steps. No mystery booking process and no extra layers between the host and the booth.</p>
+          </div>
+          <ol class="process-list" data-reveal>
+            <li><h3>Reserve your date</h3><p>Send the event date, location, guest count, and the package you are considering.</p></li>
+            <li><h3>Shape the setup</h3><p>We align on music, overlay style, sharing method, props, and arrival details.</p></li>
+            <li><h3>Enjoy the event</h3><p>Guests step onto the platform, capture clips, and the host receives access to the event gallery.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="shell">
+          <div class="section-heading" data-reveal>
+            <div><p class="eyebrow">Frequently asked</p><h2>The details hosts usually need first.</h2></div>
+            <p>If your event has a constraint that is not covered here, include it in the availability form and we will address it directly.</p>
+          </div>
+          <div class="faq-list" data-reveal>
+            <details>
+              <summary>How far in advance should I book?</summary>
+              <p>Popular weekend dates book first, so it helps to reserve as soon as your event date is set.</p>
+            </details>
+            <details>
+              <summary>Do you work with venues and planners?</summary>
+              <p>Yes. 360 Rentals can be recommended as a preferred vendor or added into a package as an event feature.</p>
+            </details>
+            <details>
+              <summary>Which package is best for a budget-friendly event?</summary>
+              <p>Self-Serve 360 is the most economical option and is built for straightforward booth setup and takedown.</p>
+            </details>
+            <details>
+              <summary>Can guests share videos right away?</summary>
+              <p>Share-Ready 360 and White-Glove 360 support sharing options such as QR, email, and AirDrop depending on setup.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section booking-section" id="book">
+        <div class="booking-grid shell">
+          <div class="booking-copy" data-reveal>
+            <p class="eyebrow eyebrow-light">Check availability</p>
+            <h2>Tell us where the party is.</h2>
+            <p>Send the essentials. Hayden will follow up with availability, fit, and the package that makes the most sense for your event.</p>
+            <div class="contact-lines">
+              <a href="tel:+12087014426">(208) 701-4426</a>
+              <a href="mailto:hello@360rentalsusa.com">hello@360rentalsusa.com</a>
+            </div>
+          </div>
+          <form class="booking-form" id="bookingForm" data-reveal>
+            <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+            <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+            <label>Phone<input type="tel" name="phone" autocomplete="tel" /></label>
+            <label>Event date<input type="date" name="date" /></label>
+            <label>
+              Event type
+              <select name="eventType">
+                <option>Wedding or reception</option>
+                <option>Corporate event</option>
+                <option>Private party</option>
+                <option>Quinceanera</option>
+                <option>Venue / planner partnership</option>
+              </select>
+            </label>
+            <label>
+              Package interest
+              <select name="package">
+                <option>Help me choose</option>
+                <option>Self-Serve 360</option>
+                <option>Share-Ready 360</option>
+                <option>White-Glove 360</option>
+              </select>
+            </label>
+            <label class="full">Event details<textarea name="details" placeholder="Location, guest count, timing, and anything else helpful."></textarea></label>
+            <button type="submit">Create email inquiry</button>
+            <p class="form-note">This opens your email app with the event details filled in. Nothing is sent until you review and send it.</p>
+          </form>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div>
-        <img class="footer-logo" src="assets/logo-transparent.png" alt="360 Rentals" />
-        <p>360 photo booth rentals for events in the Salt Lake Valley.</p>
+      <div class="footer-main shell">
+        <div class="footer-brand">
+          <img class="brand-logo" src="assets/logo-site.png" width="360" height="270" alt="360 Rentals" />
+          <p>Share-ready 360 photo booth experiences for events across the Salt Lake Valley.</p>
+        </div>
+        <div class="footer-column">
+          <h2>Explore</h2>
+          <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="#experience">Experience</a><a href="#packages">Packages</a><a href="#venues">Partners</a><a href="#book">Book</a>
+          </nav>
+        </div>
+        <div class="footer-column">
+          <h2>Local pages</h2>
+          <nav class="footer-nav" aria-label="Service area pages">
+            <a href="/salt-lake-city/">Salt Lake City</a><a href="/sandy/">Sandy</a><a href="/draper/">Draper</a>
+          </nav>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#packages">Packages</a>
-        <a href="#book">Book</a>
-        <a href="#faq">FAQ</a>
-        <a href="tel:+12087014426">Call/Text</a>
+      <div class="footer-bottom shell">
+        <span>© <span data-year>2026</span> 360 Rentals</span>
+        <span>Salt Lake Valley, Utah · (208) 701-4426</span>
       </div>
     </footer>
-
     <script src="script.js"></script>
   </body>
 </html>
