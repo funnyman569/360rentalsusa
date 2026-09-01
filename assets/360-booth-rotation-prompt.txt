@@ -1,0 +1,16 @@
+360 Rentals Seedance 2.5 video generation prompt
+
+Model: bytedance/seedance-2.5
+Provider: OpenRouter
+Generation: 4 seconds, 720p, 16:9, no audio
+Reference: https://www.smart360photobooth.com/cdn/shop/articles/what-is-a-360-photo-booth-cover.webp?v=1783683560&width=1600
+
+Prompt:
+
+Create a photorealistic 4-second product video of the exact 360 photo booth hardware shown in the reference image. Show the complete booth in a neutral, uncluttered studio/event space with a matte warm-gray background and soft, even lighting. The booth has a circular platform and a slim rotating arm with an iPhone securely mounted at the end; the iPhone remains firmly attached and physically aligned throughout.
+
+Use a locked-off camera at a three-quarter front product angle so the entire platform and rotating arm stay visible for the full shot. The arm begins at the right side of the platform at rest. Perform exactly one complete clockwise revolution around the platform. Motion timing must feel like a real motor-driven arm: 0.0–0.45 seconds starts slowly while overcoming initial inertia; 0.45–2.7 seconds accelerates smoothly to a steady realistic speed; 2.7–3.55 seconds decelerates progressively; 3.55–4.0 seconds eases into a clean stop exactly back at the original right-side position. The arm must follow one consistent circular path with realistic mechanical momentum, no wobble, no teleporting, and no extra partial rotations. Preserve the exact booth shape, platform proportions, arm geometry, iPhone scale, and neutral background from the reference.
+
+Premium commercial product photography, physically accurate motion, crisp hardware edges, subtle contact shadows, realistic reflections, no people, no text, no logos, no watermark, no added props, no cuts, no camera movement, no audio. The final frame must match the first frame closely enough to create a seamless forward/reverse boomerang loop.
+
+OpenRouter note: Seedance 2.5 currently requires at least 4 seconds. The 4.041667-second response was time-compressed to exactly 3 seconds before creating the 6-second forward/reverse loop.
