@@ -398,6 +398,7 @@ button[type="submit"]:hover {
   overflow: hidden;
   background: var(--ink-soft);
   box-shadow: var(--shadow);
+  aspect-ratio: 16 / 9;
 }
 
 .hero-frame::after {
