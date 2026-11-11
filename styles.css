@@ -1926,3 +1926,7 @@ textarea {
     animation-iteration-count: 1 !important;
   }
 }
+/* Traditional packages share the existing responsive package styling. */
+.traditional-heading { margin-top: 64px; }
+.traditional-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 760px) { .traditional-grid { grid-template-columns: 1fr; } }
